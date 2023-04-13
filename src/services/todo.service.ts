@@ -41,10 +41,10 @@ export const updateTodo = async(title: string, id: number) => {
 }                                                                   
 
 
-export const changeStatus = async(id: number) => {
+export const changeStatus = async(id: number, isCompleted: boolean) => {
     return prisma.todo.update({
         data: {
-            isCompleted: true
+            isCompleted
         }, where: {
             id
         }
