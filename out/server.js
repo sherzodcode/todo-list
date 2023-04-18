@@ -13,6 +13,9 @@ app.use((0, cors_1.default)());
 app.use(express_1.default.json());
 app.use(express_1.default.urlencoded({ extended: true }));
 app.use('/api', router_1.default);
+app.get('/', () => {
+    return "worked";
+});
 const port = process.env.PORT;
 app.listen(port, () => {
     console.log(`Serever is running on port: ${port}`);

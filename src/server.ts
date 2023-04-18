@@ -12,6 +12,10 @@ app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 app.use('/api', api)
 
+app.get('/', () => {
+    return "worked"
+})
+
 const port = process.env.PORT
 
 app.listen(port, () => {
